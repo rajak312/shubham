@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>
+    Registration Form
+  </title>
+  <style>
+    ::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  input{
+    border:none;
+    outline: none;
+  }
+    html {
+      font-size: 16px;
+    }
+
+    .form{
+     margin-block: 50px;
+    
+   }
+   .formdiv{
+    margin-top: 50px;
+    width: 440px;
+
+   }
+   
+    .userdiv{
+         position: relative;
+         margin: 5px;
+         
+    }
+    .userdiv>input{
+      padding: 12px;
+      font-size: 20px;
+      padding-left: 40px;
+      width: 100%;
+      border-radius: 10px;
+      background-color:rgb(233, 233, 233)
+    }
+    .userdiv>input:hover{
+      border: 1px solid rgb(5, 149, 233);
+    }
+
+    .field_icon_cont {
+
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px !important;
+      height:30px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     
+      pointer-events: none;
+    }
+    .passworddiv{
+      position: relative;
+      margin: 5px;
+    }
+    .passworddiv >input{
+      padding: 12px;
+      font-size: 20px;
+      padding-left: 40px;
+      width: 100%;
+      border-radius: 10px;
+      background-color:rgb(233, 233, 233)
+    }
+    .passworddiv >input:hover{
+      border: 1px solid rgb(5, 149, 233);
+      
+    }
+    .loginbtn{
+        padding: 13px;
+        width: 100%;
+      border-radius: 10px;
+      background-color:rgb(0, 71, 112);
+      margin: 5px;
+
+    }
+    label{
+      font-size: 20px;
+      color: rgb(19, 18, 18);
+    }
+
+    .field_icon {
+
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px !important;
+      height:30px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .password_eye_icon_cont {
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px !important;
+      height:30px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .eye{
+      display: none;
+    }
+
+    .main {
+      display: flex;
+      justify-content: space-around;
+      margin-right: auto;
+      width: auto;
+
+    }
+
+    .font1 {
+      font-size: 35px;
+    }
+
+    .submain {
+      margin-top: 150px;
+    }
+
+    @media only screen and (max-width: 1120px) {
+      .font1 {
+        font-size: 26px;
+      }
+    }
+
+    @media only screen and (max-width: 1020px) {
+      .main {
+        display: grid;
+        justify-content: center;
+
+      }
+
+      .font1 {
+        font-size: 25px;
+      }
+
+      .img {
+        padding: 20px;
+        background-color: #3538cd;
+
+      }
+
+      .submain {
+        margin-top: 30px;
+      }
+
+      .header {
+        color: white;
+      }
+
+
+    }
+
+    @media only screen and (max-width: 480px) {
+
+      input,
+      button {
+
+        font-size: 15px;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #cccccc;
+        border-radius: 10px;
+      }
+
+      form {
+
+        margin: 2px auto;
+        width: 80%;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      a {
+        font-size: 15px;
+      }
+
+      .font1 {
+        margin-left: calc(30% - 100px);
+        font-size: 19px;
+
+      }
+
+
+
+      b {
+        font-size: 18px;
+      }
+    }
+    .eye,.eye_slash:hover{
+      cursor: pointer;
+    }
+   
+  </style>
+  
+
+
+  
+  <!-- /* .outer_wrapper{
+    margin-block: 10px;
+  }
+  .outer_wrapper label{
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .inner_wrapper{
+    position: relative;
+  }
+  .inner_wrapper input{
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+    margin: 0;
+  }
+  .inner_wrapper .inner_icon{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner_wrapper .inner_icon svg{
+    width: 20px;
+    height: 20px;
+  }
+  .inner_wrapper .password_icon{
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%)
+  }
+  .inner_wrapper .lock_icon{
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+  } */ -->
+
+</head>
+
+<body>
+  <div class="img" style="width: 100%">
+    <div style="display: inline; ;">
+      <img src="#" style="margin-top: 20px;margin-left: 40px;font-size: 30px;color:  #3538cd">
+      <p style=" display: inline;color:  #3538cd;" class="header">CSmart HR payroll</p>
+    </div>
+  </div>
+  <div class="main">
+
+    <!-- Left side text -->
+    <div style=" text-align: left;margin-left: 10vh;color: #3538cd; display:grid;" class="submain">
+
+      <p class="font1">Welcome to Smart-Hr Pay Roll
+         <div style="display: grid;">
+           <img src="#" alt="img" style=" margin: auto ;" class="pic">
+         </div>
+      </p>
+
+    </div>
+
+
+    <!--Right Side Content-->
+    <div class="formdiv">
+
+      <div style="align-items: center; display: flex;text-align: center; margin: auto;">
+        <b style="font-size: 30px;  display:flex ;margin: auto;">Login</b>
+
+      </div>
+      <!-- form Start here -->
+
+      <form class="form">
+        <!-- User name -->
+        <div>
+          <label for="username">Username</label>
+          <div class="userdiv">
+            <div class="field_icon_cont">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" >
+                <path
+                  d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+              </svg>
+            </div>
+  
+            <input type="text" id="username" class="password" placeholder="Username">
+  
+          </div>
+          <div id="user"></div>
+        </div>
+        
+
+        <!-- <div class="outer_wrapper">
+          
+          <label for="password2">Password 2</label>
+           inner wrapper  
+          <div class="inner_wrapper">
+            <input type="password">
+            <div class="inner_icon password_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="">
+                <path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
+                <path fill-rule="evenodd"
+                  d="M.664 10.59a1.651 1.651 0 010-1.186A10.004 10.004 0 0110 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0110 17c-4.257 0-7.893-2.66-9.336-6.41zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="inner_icon lock_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="">
+                <path fill-rule="evenodd"
+                  d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+        </div> -->
+
+
+
+
+
+        <!-- Password -->
+
+        <div>
+          <label for="password">Password</label>
+          <div class="passworddiv">
+            <div class="field_icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="">
+                <path fill-rule="evenodd"
+                  d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
+                  clip-rule="evenodd" />
+              </svg>
+            
+            </div>
+            <div class="password_eye_icon_cont" onclick="passwordbtn()">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="eye">
+                <path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
+                <path fill-rule="evenodd"
+                  d="M.664 10.59a1.651 1.651 0 010-1.186A10.004 10.004 0 0110 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0110 17c-4.257 0-7.893-2.66-9.336-6.41zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="eye_slash">
+                <path fill-rule="evenodd"
+                  d="M3.28 2.22a.75.75 0 00-1.06 1.06l14.5 14.5a.75.75 0 101.06-1.06l-1.745-1.745a10.029 10.029 0 003.3-4.38 1.651 1.651 0 000-1.185A10.004 10.004 0 009.999 3a9.956 9.956 0 00-4.744 1.194L3.28 2.22zM7.752 6.69l1.092 1.092a2.5 2.5 0 013.374 3.373l1.091 1.092a4 4 0 00-5.557-5.557z"
+                  clip-rule="evenodd" />
+                <path
+                  d="M10.748 13.93l2.523 2.523a9.987 9.987 0 01-3.27.547c-4.258 0-7.894-2.66-9.337-6.41a1.651 1.651 0 010-1.186A10.007 10.007 0 012.839 6.02L6.07 9.252a4 4 0 004.678 4.678z" />
+              </svg>
+              
+            </div>
+  
+            <input type="password" id="password" class="password" placeholder="Password" id="p">
+  
+          </div>
+          <div id="Password"></div>
+        </div>
+
+        <a href="#" style="font-size: 20px;float: right;margin: 10px; text-decoration: none;" >Forget password? </a>
+
+        <button onclick="validate(event)" class="loginbtn">
+          <span style="font-size: 20px;">Login</span></button>
+
+        <p style="margin: 3vh 0vh 3vh 20vh ; font-size: 18px;">Don't have an account? <a href="#" style="font-size: 20px; text-decoration: none;"> SignIUp</a></p>
+        <p style="margin: 0vh 10vh 0vh 10vh; text-align: center;">v1.0
+          ©️All rights reserved by
+          HRM
+          2016
+          Design & developed by
+          iCore Innovations Pvt Ltd.</p>
+      </form>
+    </div>
+  </div>
+   <script>
+    function validate(e) {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      if (username.length == 0) {
+        let user = document.getElementById("user");
+        user.innerHTML = "Please provide username";
+        user.style.color = "red";
+        e.preventDefault()
+
+      }
+      if (password.length == 0) {
+        let user = document.getElementById("Password");
+        user.innerHTML = "Please provide password";
+        user.style.color = "red";
+        e.preventDefault();
+
+      }
+
+    }
+     let flag=false;
+     function passwordbtn(){
+      var Btns = document.querySelectorAll(".password_eye_icon_cont")
+      console.log(Btns);
+      if(flag===false){
+       
+         document.getElementById("password").setAttribute("type","text");
+         console.log("hello");
+          flag=true;
+          console.log("ddd",document.getElementsByClassName("eye_slash")[0])
+        let a= document.getElementsByClassName("eye_slash")[0].style.display="none";
+        let b= document.getElementsByClassName("eye")[0].style.display="block";
+      }
+      else{
+         document.getElementById("password").setAttribute("type","password");
+        flag=false;
+         let a= document.getElementsByClassName("eye_slash")[0].style.display="block";
+        let b= document.getElementsByClassName("eye")[0].style.display="none";
+      }
+     } 
+  </script>
+</body>
+
+</html>

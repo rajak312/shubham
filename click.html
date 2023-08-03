@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .container {
+      cursor: pointer;
+      margin: 10px;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .dialog {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid black;
+      padding: 20px;
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <div id="container1" class="container">Content of Container 1</div>
+    <div id="container2" class="container">Content of Container 2</div>
+
+    <div id="popupDialog" class="dialog">
+      <div class="dialog-content">
+        <!-- Content of the popup dialog goes here -->
+        <p>Popup dialog content</p>
+      </div>
+    </div>
+    <script src="click.js"></script>
+  </body>
+</html>
